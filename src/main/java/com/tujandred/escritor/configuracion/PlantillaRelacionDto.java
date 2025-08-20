@@ -1,4 +1,4 @@
-package com.github.tujandred.paperbackDTO.configuracion;
+package com.tujandred.escritor.configuracion;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

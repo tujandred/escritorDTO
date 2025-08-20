@@ -1,12 +1,11 @@
-package com.github.tujandred.paperbackDTO.CRUD.entidades.tramas;
+package com.tujandred.escritor.CRUD.entidades.tramas;
 
-import com.github.tujandred.paperbackDTO.CRUD.basicos.ElementoDto;
+
+import com.tujandred.escritor.CRUD.basicos.ElementoDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * DTO for {@link com.github.tujandred.pbsBackend.datos.generables.entidades.tramas.Trama}

@@ -1,4 +1,4 @@
-package com.github.tujandred.paperbackDTO.CRUD.entidades.proyecto;
+package com.tujandred.escritor.CRUD.entidades.proyecto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

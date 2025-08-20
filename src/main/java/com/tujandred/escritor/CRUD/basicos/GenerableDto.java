@@ -1,4 +1,4 @@
-package com.github.tujandred.paperbackDTO.CRUD.basicos;
+package com.tujandred.escritor.CRUD.basicos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;

@@ -1,4 +1,4 @@
-package com.github.tujandred.paperbackDTO.CRUD.basicos;
+package com.tujandred.escritor.CRUD.basicos;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;

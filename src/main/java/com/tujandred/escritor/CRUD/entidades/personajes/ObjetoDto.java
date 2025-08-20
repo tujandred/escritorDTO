@@ -1,12 +1,11 @@
-package com.github.tujandred.paperbackDTO.CRUD.entidades.personajes;
+package com.tujandred.escritor.CRUD.entidades.personajes;
 
-import com.github.tujandred.paperbackDTO.CRUD.basicos.ElementoDto;
+
+import com.tujandred.escritor.CRUD.basicos.ElementoDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * DTO for {@link com.github.tujandred.pbsBackend.datos.generables.entidades.personajes.Objeto}
@@ -15,7 +14,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Schema(name = "ObjetoDto", description = "DTO que representa un objeto dentro de un universo narrativo. Hereda de ElementoDto. Incluye información sobre material, origen, poderes, estado y otros atributos relevantes.")
-public class ObjetoDto extends ElementoDto  {
+public class ObjetoDto extends ElementoDto {
     @Schema(description = "Tipo de generable al que pertenece el objeto", example = "Artefacto")
     String tipoGenerable;
     @Schema(description = "Material del que está hecho el objeto", example = "Acero mágico")

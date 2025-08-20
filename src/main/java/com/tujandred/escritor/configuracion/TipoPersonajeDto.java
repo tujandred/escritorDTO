@@ -1,4 +1,4 @@
-package com.github.tujandred.paperbackDTO.configuracion;
+package com.tujandred.escritor.configuracion;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
