@@ -10,7 +10,7 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DocumentoDTO {
-    private String id;
+    private Long id;
     private String nombre;
     private String contenido;
     private Map<String, Object> metadatos;
