@@ -15,9 +15,13 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(callSuper = true)
 @Schema(name = "EscenarioDto", description = "DTO que representa un escenario dentro de un universo. Hereda de ElementoDto.")
 public class EscenarioDto extends ElementoDto {
     @Schema(description = "Identificador del universo al que pertenece el escenario", example = "1")
     Long universoId;
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

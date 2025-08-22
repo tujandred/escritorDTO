@@ -14,10 +14,13 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(callSuper = true)
 @Schema(name = "PuntoDto", description = "DTO que representa un punto dentro de un acto narrativo. Hereda de ElementoDto. Incluye información sobre el acto al que pertenece.")
 public class PuntoDto extends ElementoDto {
     @Schema(description = "Identificador del acto al que pertenece el punto", example = "5")
     Long actoId;
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

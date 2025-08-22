@@ -14,7 +14,6 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(callSuper = true)
 @Schema(name = "PersonaDto", description = "DTO que representa una persona dentro de un universo narrativo. Hereda de ElementoDto. Incluye información sobre universo, edad, profesión, características físicas, motivaciones, evolución y otros atributos psicológicos y narrativos.")
 public class PersonaDto extends ElementoDto {
     @Schema(description = "Identificador del universo al que pertenece la persona", example = "1")
@@ -51,4 +50,8 @@ public class PersonaDto extends ElementoDto {
     String hastaDonde;
     @Schema(description = "Identificador del tipo de personaje asociado a la persona", example = "3")
     private Long tipoPersonajeId;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
