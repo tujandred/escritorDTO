@@ -49,4 +49,8 @@ public class PersonaDto extends ElementoDto {
     String hastaDonde;
     @Schema(description = "Identificador del tipo de personaje asociado a la persona", example = "3")
     private Long tipoPersonajeId;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

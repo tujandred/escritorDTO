@@ -14,4 +14,8 @@ import lombok.Data;
 @AllArgsConstructor
 @Schema(name = "UniversoDto", description = "DTO que representa un universo narrativo. Hereda de ElementoDto. ")
 public class UniversoDto extends ElementoDto {
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

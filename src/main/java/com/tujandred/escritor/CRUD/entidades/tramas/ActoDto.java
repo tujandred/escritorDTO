@@ -17,5 +17,9 @@ import lombok.NoArgsConstructor;
 public class ActoDto extends ElementoDto {
     @Schema(description = "Identificador de la trama a la que pertenece el acto", example = "2")
     Long tramaId;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
 }

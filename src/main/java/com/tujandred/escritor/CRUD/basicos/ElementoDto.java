@@ -13,4 +13,8 @@ import lombok.NoArgsConstructor;
 public class ElementoDto extends GenerableDto{
     @Schema(description = "Orden del elemento dentro de su jerarquía. Si el valor es igual o menor a 0, indica que no hay orden", example = "1")
     private Integer orden;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

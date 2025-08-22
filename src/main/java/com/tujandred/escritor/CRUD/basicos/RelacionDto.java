@@ -31,4 +31,8 @@ public class RelacionDto extends GenerableDto{
     private Integer prioridad1 = 5;
     @Schema(description = "Prioridad del segundo elemento en la relación. 1 es la máxima prioridad.", example = "3")
     private Integer prioridad2 = 5;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

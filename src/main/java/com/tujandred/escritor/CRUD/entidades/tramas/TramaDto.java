@@ -17,4 +17,8 @@ import lombok.NoArgsConstructor;
 public class TramaDto extends ElementoDto {
     @Schema(description = "Identificador del universo al que pertenece la trama", example = "1")
     Long universoId;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

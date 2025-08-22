@@ -21,4 +21,8 @@ public class ContenedorDto extends ElementoDto {
     Long contenedorId;
     @Schema(description = "Tipo de contenedor de texto", example = "CAPITULO")
     TipoContenedorTexto tipoContenedorTexto;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

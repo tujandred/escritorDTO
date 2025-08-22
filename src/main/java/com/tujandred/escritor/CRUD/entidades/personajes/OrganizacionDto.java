@@ -41,4 +41,8 @@ public class OrganizacionDto extends ElementoDto {
     String modoOperar;
     @Schema(description = "Simbolismo o significado de la organización", example = "El búho representa la sabiduría secreta")
     String simbolismo;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

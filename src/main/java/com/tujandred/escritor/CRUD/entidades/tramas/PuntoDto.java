@@ -17,4 +17,8 @@ import lombok.NoArgsConstructor;
 public class PuntoDto extends ElementoDto {
     @Schema(description = "Identificador del acto al que pertenece el punto", example = "5")
     Long actoId;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

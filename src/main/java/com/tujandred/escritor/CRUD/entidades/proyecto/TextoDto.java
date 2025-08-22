@@ -19,4 +19,8 @@ public class TextoDto extends ElementoDto {
     Long contenedorId;
     @Schema(description = "Contenido del texto", example = "Érase una vez en un reino lejano...")
     String contenido;
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
