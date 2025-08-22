@@ -11,8 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Schema(name = "ElementoDto", description = "DTO que representa un elemento generable con tipo y orden. Hereda de GenerableDto.")
 public class ElementoDto extends GenerableDto{
-    @Schema(description = "Tipo de generable al que pertenece el elemento", example = "Capítulo")
-    private String tipoGenerable;
     @Schema(description = "Orden del elemento dentro de su jerarquía. Si el valor es igual o menor a 0, indica que no hay orden", example = "1")
     private Integer orden;
 }

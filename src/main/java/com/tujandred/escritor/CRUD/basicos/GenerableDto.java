@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -39,51 +40,42 @@ public class GenerableDto implements Serializable {
 
     @Schema(description = "Atributos adicionales del registro en formato clave-valor", example = "{\"clave\":\"valor\"}")
     @JsonPropertyDescription("Atributos adicionales del registro en formato clave-valor")
-    private Map<String, Object> atributos;
+    private Map<String, Object> atributos = new HashMap<>();
 
     @Schema(description = "La cadena de búsqueda. Generada automáticamente (no hace falta rellenar)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("La cadena de búsqueda. Generada automáticamente (no hace falta rellenar)")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String searchTerm;
 
     @Schema(description = "Fecha de creación del registro", type = "string", format = "date-time", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Fecha de creación del registro")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Instant fechaCreacion;
 
     @Schema(description = "Fecha de última actualización del registro", type = "string", format = "date-time", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Fecha de última actualización del registro")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Instant fechaActualizacion;
 
     @Schema(description = "Fecha de vectorización del registro", type = "string", format = "date-time", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Fecha de vectorización del registro")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Instant fechaVectorizacion;
 
     @Schema(description = "Etiqueta del registro (no hace falta rellenar)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Etiqueta del registro (no hace falta rellenar)")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String etiqueta;
 
     @Schema(description = "Tipo de datos del registro (no hace falta rellenar)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Tipo de datos del registro (no hace falta rellenar)")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String tipoDatos;
 
     @Schema(description = "Identificador del universo al que pertenece el registro (no hace falta rellenar, puede ser nulo)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Identificador del universo al que pertenece el registro (no hace falta rellenar, puede ser nulo)")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long universoRaizId;
 
     @Schema(description = "Identificador del padre del registro (no hace falta rellenar, puede ser nulo)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Identificador del padre del registro (no hace falta rellenar, puede ser nulo)")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long padreId;
 
     @Schema(description = "Tipo de datos del padre del registro (no hace falta rellenar, puede ser nulo)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Tipo de datos del padre del registro (no hace falta rellenar, puede ser nulo)")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String tipoPadre;
 
 }

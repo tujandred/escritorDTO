@@ -23,14 +23,12 @@ public class RelacionDto extends GenerableDto{
     String etiqueta1;
     @Schema(description = "Etiqueta asociada al segundo elemento", example = "antagonista")
     String etiqueta2;
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Schema(description = "Etiqueta para la relación saliente", example = "conoce a")
     String etiquetaSaliente;
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Schema(description = "Etiqueta para la relación entrante", example = "es conocido por")
     String etiquetaEntrante;
     @Schema(description = "Prioridad del primer elemento en la relación. 1 es la máxima prioridad.", example = "5")
     private Integer prioridad1 = 5;
     @Schema(description = "Prioridad del segundo elemento en la relación. 1 es la máxima prioridad.", example = "3")
-    private Integer prioridad2;
+    private Integer prioridad2 = 5;
 }
