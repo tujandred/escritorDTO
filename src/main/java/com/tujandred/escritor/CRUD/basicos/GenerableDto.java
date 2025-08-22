@@ -2,9 +2,7 @@ package com.tujandred.escritor.CRUD.basicos;
 
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -14,7 +12,8 @@ import java.util.Map;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Schema(name = "GenerableDto", description = "DTO base para entidades generables. Contiene información común como identificador, nombre, descripciones, fechas y atributos adicionales.")
 public class GenerableDto implements Serializable {
     @Schema(description = "El identificador del registro. Nulo al crear", example = "123")
@@ -87,4 +86,16 @@ public class GenerableDto implements Serializable {
         return super.toString();
     }
 
+    @Override
+    public int hashCode() {
+        return getId() != null ? getId().hashCode() : 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        GenerableDto that = (GenerableDto) obj;
+        return getId() != null && getId().equals(that.getId());
+    }
 }
