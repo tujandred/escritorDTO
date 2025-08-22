@@ -1,6 +1,5 @@
 package com.tujandred.escritor.CRUD.basicos;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -77,5 +76,10 @@ public class GenerableDto implements Serializable {
     @Schema(description = "Tipo de datos del padre del registro (no hace falta rellenar, puede ser nulo)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Tipo de datos del padre del registro (no hace falta rellenar, puede ser nulo)")
     private String tipoPadre;
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
 }
