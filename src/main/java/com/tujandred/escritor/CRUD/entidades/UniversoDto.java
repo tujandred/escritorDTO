@@ -9,7 +9,7 @@ import lombok.*;
  * DTO for {@link com.github.tujandred.pbsBackend.datos.generables.Universo}
  */
 
-@NoArgsConstructor
+
 @AllArgsConstructor
 @Getter
 @Setter
