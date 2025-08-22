@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * DTO for {@link com.github.tujandred.pbsBackend.datos.generables.entidades.tramas.Acto}
@@ -13,13 +14,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(callSuper = true)
 @Schema(name = "ActoDto", description = "DTO que representa un acto dentro de una trama narrativa. Hereda de ElementoDto. Incluye información sobre la trama a la que pertenece.")
 public class ActoDto extends ElementoDto {
     @Schema(description = "Identificador de la trama a la que pertenece el acto", example = "2")
     Long tramaId;
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+
 
 }

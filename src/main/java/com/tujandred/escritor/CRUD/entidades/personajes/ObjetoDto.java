@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * DTO for {@link com.github.tujandred.pbsBackend.datos.generables.entidades.personajes.Objeto}
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(callSuper = true)
 @Schema(name = "ObjetoDto", description = "DTO que representa un objeto dentro de un universo narrativo. Hereda de ElementoDto. Incluye información sobre material, origen, poderes, estado y otros atributos relevantes.")
 public class ObjetoDto extends ElementoDto {
     @Schema(description = "Tipo de generable al que pertenece el objeto", example = "Artefacto")
@@ -43,8 +45,5 @@ public class ObjetoDto extends ElementoDto {
     String simbolismo;
     @Schema(description = "Identificador del universo al que pertenece el objeto", example = "1")
     Long universoId;
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+
 }

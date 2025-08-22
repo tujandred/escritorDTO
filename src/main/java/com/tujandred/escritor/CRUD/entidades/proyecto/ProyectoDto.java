@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * DTO for {@link com.github.tujandred.pbsBackend.datos.generables.entidades.proyecto.Proyecto}
@@ -13,12 +14,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(callSuper = true)
 @Schema(name = "ProyectoDto", description = "DTO que representa un proyecto narrativo. Hereda de ElementoDto. Incluye información sobre el universo al que pertenece.")
 public class ProyectoDto extends ElementoDto {
     @Schema(description = "Identificador del universo al que pertenece el proyecto", example = "1")
     Long universoId;
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }

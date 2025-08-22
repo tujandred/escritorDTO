@@ -79,6 +79,11 @@ public class GenerableDto implements Serializable {
 
     @Override
     public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("GenerableDto{id=").append(id);
+        sb.append(", nombre='").append(nombre).append('\'');
+        sb.append(", tipoDatos='").append(tipoDatos).append('\'');
+        sb.append('}');
         return super.toString();
     }
 

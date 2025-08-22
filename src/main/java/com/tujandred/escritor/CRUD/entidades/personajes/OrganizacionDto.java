@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * DTO for {@link com.github.tujandred.pbsBackend.datos.generables.entidades.personajes.Organizacion}
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(callSuper = true)
 @Schema(name = "OrganizacionDto", description = "DTO que representa una organización dentro de un universo narrativo. Hereda de ElementoDto. Incluye información sobre tipo, objetivo, historia, fechas, misión, visión, valores y otros atributos relevantes.")
 public class OrganizacionDto extends ElementoDto {
     @Schema(description = "Identificador del universo al que pertenece la organización", example = "1")
@@ -41,8 +43,4 @@ public class OrganizacionDto extends ElementoDto {
     String modoOperar;
     @Schema(description = "Simbolismo o significado de la organización", example = "El búho representa la sabiduría secreta")
     String simbolismo;
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }

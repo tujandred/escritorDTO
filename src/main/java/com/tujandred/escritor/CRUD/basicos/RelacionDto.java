@@ -5,10 +5,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(callSuper = true)
 @Schema(name = "RelacionDto", description = "DTO que representa una relación entre dos elementos dentro de un universo. Incluye identificadores, tipo de relación y etiquetas asociadas.")
 public class RelacionDto extends GenerableDto{
     @Schema(description = "Identificador del universo al que pertenece la relación", example = "1")
@@ -31,8 +33,4 @@ public class RelacionDto extends GenerableDto{
     private Integer prioridad1 = 5;
     @Schema(description = "Prioridad del segundo elemento en la relación. 1 es la máxima prioridad.", example = "3")
     private Integer prioridad2 = 5;
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }
