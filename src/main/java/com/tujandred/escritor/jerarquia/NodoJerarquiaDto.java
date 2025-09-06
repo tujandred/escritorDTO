@@ -1,6 +1,7 @@
 package com.tujandred.escritor.jerarquia;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.tujandred.escritor.CRUD.basicos.ElementoDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,24 +16,24 @@ import java.util.List;
 @Data
 @Schema(name = "NodoJerarquiaDto", description = "Nodo de la jerarquía de entidades. Contiene información sobre la entidad, su relación jerárquica y sus hijos.")
 public class NodoJerarquiaDto implements Serializable {
-    @Schema(description = "Identificador único del nodo", example = "1", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Identificador único del nodo", example = "1")
     private Long id;
-    @Schema(description = "Nombre del nodo", example = "Capítulo 1", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Nombre del nodo", example = "Capítulo 1")
     private String nombre;
-    @Schema(description = "Descripción del nodo", example = "Primer capítulo de la historia", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Descripción del nodo", example = "Primer capítulo de la historia")
     private String descripcion;
-    @Schema(description = "Número de orden dentro de su jerarquía. Si es menor o igual que 0 o null, indica no ordenado", example = "1", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Número de orden dentro de su jerarquía. Si es menor o igual que 0 o null, indica no ordenado", example = "1")
     private Integer orden;
-    @Schema(description = "Término de búsqueda asociado", example = "capitulo1", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Término de búsqueda asociado", example = "capitulo1")
     private String searchTerm;
-    @Schema(description = "Etiqueta del nodo", example = "Capítulo", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Etiqueta del nodo", example = "Capítulo")
     private String etiqueta;
-    @Schema(description = "Tipo de datos del nodo", example = "Texto", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Tipo de datos del nodo", example = "Texto")
     private String tipoDatos;
-    @Schema(description = "ID del nodo padre", example = "50", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "ID del nodo padre", example = "50")
     private Long padreId;
-    @Schema(description = "Lista de nodos hijos", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Lista de nodos hijos")
     private List<NodoJerarquiaDto> hijos = new ArrayList<>();
-    @Schema(description = "Lista de tipos asociados al nodo", accessMode = Schema.AccessMode.READ_ONLY)
+    @Schema(description = "Lista de tipos asociados al nodo")
     private List<String> tipos = new ArrayList<>();
 }
