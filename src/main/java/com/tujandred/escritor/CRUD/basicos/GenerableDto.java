@@ -2,7 +2,10 @@ package com.tujandred.escritor.CRUD.basicos;
 
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -62,7 +65,7 @@ public class GenerableDto implements Serializable {
 
     @Schema(description = "Tipo de datos del registro (no hace falta rellenar)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Tipo de datos del registro (no hace falta rellenar)")
-    private String tipoDatos;
+    private TipoDatos tipoDatos;
 
     @Schema(description = "Identificador del universo al que pertenece el registro (no hace falta rellenar, puede ser nulo)", accessMode = Schema.AccessMode.READ_ONLY)
     @JsonPropertyDescription("Identificador del universo al que pertenece el registro (no hace falta rellenar, puede ser nulo)")
