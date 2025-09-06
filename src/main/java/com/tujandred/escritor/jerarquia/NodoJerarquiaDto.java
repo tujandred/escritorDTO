@@ -46,4 +46,10 @@ public class NodoJerarquiaDto implements Serializable {
 
     @Schema(description = "Lista de tipos asociados al nodo")
     private List<String> tipos = new ArrayList<>();
+
+    @Schema(description = "Indica si el nodo puede subir", example = "true")
+    private boolean puedeSubir;
+    @Schema(description = "Indica si el nodo puede bajar", example = "true")
+    private boolean puedeBajar;
+
 }
