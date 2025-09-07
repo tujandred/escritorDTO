@@ -14,7 +14,9 @@ public enum TipoDatos {
     TEXTO,
     TRAMA,
     ACTO,
-    PUNTO;
+    PUNTO,
+    CARPETA,
+    DESCONOCIDO;
 
 
     @Override
