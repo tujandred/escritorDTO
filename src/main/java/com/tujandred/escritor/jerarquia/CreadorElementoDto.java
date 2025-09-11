@@ -30,7 +30,7 @@ public class CreadorElementoDto implements Serializable {
     private Integer orden;
 
     @Schema(description = "Tipo del elemento padre.")
-    private String tipoPadre;
+    private TipoDatos tipoPadre;
 
     @Schema(description = "Tipo de contenedor de texto asociado, si aplica.")
     private TipoContenedorTexto tipoContenedorTexto = null;
