@@ -89,4 +89,13 @@ public enum TipoDatos {
                 return "Desconocido";
         }
     }
+
+    public boolean esOrdenable() {
+        switch (this) {
+            case PROYECTO, CONTENEDOR, TEXTO, ACTO, PUNTO:
+                return true;
+            default:
+                return false;
+        }
+    }
 }
