@@ -1,5 +1,6 @@
 package com.tujandred.escritor.configuracion;
 
+import com.tujandred.escritor.CRUD.basicos.TipoDatos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,5 +24,6 @@ public class PlantillaRelacionDto implements Serializable {
     private String etiqueta2;
     private String descripcion;
     private Map<String, Object> atributos;
-    private Set<String> tiposPermitidos = new LinkedHashSet<>();
+    private Set<TipoDatos> tiposPermitidos1 = new LinkedHashSet<>();
+    private Set<TipoDatos> tiposPermitidos2 = new LinkedHashSet<>();
 }
