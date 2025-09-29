@@ -30,4 +30,6 @@ public class RelacionDto extends GenerableDto{
     private Integer prioridad1 = 5;
     @Schema(description = "Prioridad del segundo elemento en la relación. 1 es la máxima prioridad.", example = "3")
     private Integer prioridad2 = 5;
+    @Schema(description = "Identificador de la plantilla asociada a la relación, si aplica", example = "2")
+    private Long plantillaId;
 }
