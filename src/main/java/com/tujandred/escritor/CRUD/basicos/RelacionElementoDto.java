@@ -18,6 +18,10 @@ public class RelacionElementoDto extends GenerableDto {
     Long esteId;
     @Schema(description = "Identificador del otro elemento de la relación", example = "10")
     Long otroId;
+    @Schema(description = "Nombre del otro elemento de la relación", example = "Rey Arturo")
+    String nombreOtro;
+    @Schema(description = "Tipo del otro elemento de la relación", example = "Personaje")
+    TipoDatos tipoOtro;
     @Schema(description = "Tipo de relación entre los elementos", example = "amistad")
     String tipoRelacion;
     @Schema(description = "Etiqueta de la relación del elemento seleccionado al destino", example = "protagonista")
