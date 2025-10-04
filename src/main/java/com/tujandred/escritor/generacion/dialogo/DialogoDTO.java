@@ -17,6 +17,7 @@ import java.util.Map;
 public class DialogoDTO {
     @Schema(
         description = "Lista de instrucciones para el diálogo",
+        type = "array",
         implementation = MensajeDTO.class,
         example = "[{'uuid':'123e4567-e89b-12d3-a456-426614174000','tipo':'INSTRUCCION','texto':'Sigue estas reglas','timeStamp':'2025-10-04T12:34:56.789Z','tipoResultado':'TEXTO'}]"
     )
@@ -24,6 +25,7 @@ public class DialogoDTO {
 
     @Schema(
         description = "Lista de mensajes intercambiados en el diálogo",
+        type = "array",
         implementation = MensajeDTO.class,
         example = "[{'uuid':'223e4567-e89b-12d3-a456-426614174001','tipo':'MENSAJE','texto':'Hola','timeStamp':'2025-10-04T12:35:00.000Z','tipoResultado':'TEXTO'}]"
     )
