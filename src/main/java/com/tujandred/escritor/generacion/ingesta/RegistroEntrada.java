@@ -23,5 +23,6 @@ public class RegistroEntrada {
     private RegistroEntradaJerarquia jerarquia;
     private List<RegistroEntradaItem> clasificacion = new ArrayList<>();
     private List<RegistroEntradaItemRelacion> relaciones = new ArrayList<>();
+    private String contenido = "";
 
 }
