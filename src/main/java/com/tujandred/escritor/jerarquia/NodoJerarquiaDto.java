@@ -26,6 +26,9 @@ public class NodoJerarquiaDto implements Serializable {
     @Schema(description = "Descripción del nodo", example = "Primer capítulo de la historia")
     private String descripcion;
 
+    @Schema(description = "Descripción adicional del nodo", example = "Contiene la introducción y el desarrollo inicial")
+    private String entradaAdicional;
+
     @Schema(description = "Número de orden dentro de su jerarquía. Si es menor o igual que 0 o null, indica no ordenado", example = "1")
     private Integer orden;
 
