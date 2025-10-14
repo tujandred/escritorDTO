@@ -61,4 +61,27 @@ public class MensajeDTO {
             return texto;
         }
     }
+
+    public void clasificar() {
+        Pattern pattern = Pattern.compile("```(\\w+)\\n([\\s\\S]*?)\\n```");
+        Matcher matcher = pattern.matcher(texto);
+
+        if (matcher.find()) {
+            String tipo = matcher.group(1);      // json, markdown, etc.
+            // Clasificación simple
+            switch (tipo.toLowerCase()) {
+                case "json":
+                    tipoResultado = TipoResultadoMensaje.JSON;
+                    break;
+                case "markdown":
+                    tipoResultado = TipoResultadoMensaje.MARKDOWN;
+                    break;
+                default:
+                    tipoResultado = TipoResultadoMensaje.TEXTO;
+                    break;
+            }
+        } else {
+            tipoResultado = TipoResultadoMensaje.TEXTO;
+        }
+    }
 }
