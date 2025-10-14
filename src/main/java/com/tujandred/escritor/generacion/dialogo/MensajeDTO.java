@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -48,4 +50,15 @@ public class MensajeDTO {
         example = "TEXTO"
     )
     private TipoResultadoMensaje tipoResultado = TipoResultadoMensaje.TEXTO;
+
+    public String getContenido() {
+        Pattern pattern = Pattern.compile("```(\\w+)\\n([\\s\\S]*?)\\n```");
+        Matcher matcher = pattern.matcher(texto);
+
+        if (matcher.find()) {
+            return matcher.group(2); // contenido del bloque
+        } else {
+            return texto;
+        }
+    }
 }
