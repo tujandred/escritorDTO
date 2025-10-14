@@ -36,5 +36,5 @@ public class DialogoDTO {
         type = "object",
         example = "{'idioma':'es','nivel':'avanzado'}"
     )
-    private Map<String, String> parametros = new HashMap<>();
+    private Map<String, Object> parametros = new HashMap<>();
 }
