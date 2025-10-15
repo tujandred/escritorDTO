@@ -1,4 +1,4 @@
-package com.tujandred.escritor.generacion.dialogo;
+package com.tujandred.escritor.generacion.dialogo.SolicitudesGeneracion;
 
 import com.tujandred.escritor.generacion.dialogo.enums.FormatoResultado;
 import io.swagger.v3.oas.annotations.media.Schema;
