@@ -10,7 +10,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Schema(name = "InstruccionPropiedad", description = "Instrucciones para la generación de una propiedad específica.")
 public class InstruccionPropiedad {
+    @Schema(
+            description = "Nombre de la propiedad o campo a generar",
+            example = "titulo"
+    )
     private String nombreCampo;
+    @Schema(
+            description = "Significado o contexto de la propiedad para guiar la generación",
+            example = "El título debe ser llamativo y relevante para el contenido."
+    )
     private String significado;
+    @Schema(
+            description = "Longitud aproximada del resultado",
+            example = "100"
+    )
     private int longitud = 100;
 }
