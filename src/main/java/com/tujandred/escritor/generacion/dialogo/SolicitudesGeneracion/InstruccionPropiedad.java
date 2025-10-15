@@ -25,4 +25,16 @@ public class InstruccionPropiedad {
             example = "100"
     )
     private int longitud = 100;
+
+    @Override
+    public String toString() {
+        var sb = new StringBuilder();
+        sb.append(nombreCampo)
+                .append(": ")
+                .append(significado)
+                .append(". Longitud: ")
+                .append(longitud)
+                .append(" palabras.");
+        return sb.toString();
+    }
 }
