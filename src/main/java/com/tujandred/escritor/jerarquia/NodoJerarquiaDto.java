@@ -54,5 +54,9 @@ public class NodoJerarquiaDto implements Serializable {
     private boolean puedeSubir;
     @Schema(description = "Indica si el nodo puede bajar", example = "true")
     private boolean puedeBajar;
+    @Schema(description = "Número de propiedades generables asociadas al nodo", example = "5")
+    private int numPropsGenerables;
+    @Schema(description = "Número de propiedades incompletas asociadas al nodo", example = "2")
+    private int numPropsIncompletas;
 
 }

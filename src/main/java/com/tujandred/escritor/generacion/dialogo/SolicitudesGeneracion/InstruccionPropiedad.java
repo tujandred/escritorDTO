@@ -16,6 +16,11 @@ public class InstruccionPropiedad {
     )
     private String nombreCampo;
     @Schema(
+            description = "Título o encabezado de la propiedad",
+            example = "Título del capítulo"
+    )
+    private String titulo;
+    @Schema(
             description = "Significado o contexto de la propiedad para guiar la generación",
             example = "El título debe ser llamativo y relevante para el contenido."
     )
