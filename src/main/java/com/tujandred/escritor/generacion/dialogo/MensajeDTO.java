@@ -3,6 +3,7 @@ package com.tujandred.escritor.generacion.dialogo;
 import com.tujandred.escritor.generacion.dialogo.enums.TipoMensaje;
 import com.tujandred.escritor.generacion.dialogo.enums.TipoResultadoMensaje;
 import io.swagger.v3.oas.annotations.media.Schema;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -51,6 +52,12 @@ public class MensajeDTO {
     )
     private TipoResultadoMensaje tipoResultado = TipoResultadoMensaje.TEXTO;
 
+    @Schema(
+        name = "contenido",
+        description = "Contenido del mensaje sin bloques de código",
+        accessMode = Schema.AccessMode.READ_ONLY
+    )
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     public String getContenido() {
         Pattern pattern = Pattern.compile("```(\\w+)\\n([\\s\\S]*?)\\n```");
         Matcher matcher = pattern.matcher(texto);
